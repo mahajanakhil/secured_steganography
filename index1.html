@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+Secured Steganography and Spatial Domain Algorithms : A comparison
+</title>
+<style>
+input
+{
+border-color:black;
+border:solid 2px;
+border-radius:5px;
+}
+</style>
+<script>
+    function submitForm(action)
+    {
+        document.getElementById('form1').action = action;
+        document.getElementById('form1').submit();
+    }
+</script>
+</head>
+<body bgcolor="aqua">
+<h1 align="center">Secured Steganography and Spatial Domain Algorithms : A comparison</h1>
+<hr>
+<form id="form1" name="form1" method="post" enctype="multipart/form-data">
+<i><table align="center"  border='2' cellpadding="7" rules="all">
+<tr>
+<td align="center">
+<h3>Select the Image</h3>
+<td align="center"><input type="file" name="imag">
+</tr>
+<tr>
+<td align="center">
+<h3>Message</h3>
+</td>
+<td align="center">
+<input type="text" name="mess" size="37">
+</td>
+</tr>
+<tr>
+<td align="center">
+<h3>Threshold value</h3>
+</td>
+<td align="center">
+<input type="text" name="thres" size="37">
+</td>
+</tr>
+<!--<tr>
+<td>
+<h3>Enter the threshold value:</h3>
+</td>
+<td>
+<input name="thresh">
+<td>
+</tr>!-->
+<tr>
+<td align="center">
+<h3>Compression Algorithm</h3>
+</td>
+<td align="center">
+<input type="button" onclick="submitForm('compress.php')" value="Compress" />
+</td>
+</tr>
+<tr>
+<td>
+<h3>
+Embedding Algorithm
+</h3>
+</td>
+<td align="center">
+<input type="button" onclick="submitForm('lsbembedd.php')" value="      LSB      " />
+<input type="button" onclick="submitForm('stego.php')" value="    Stego   " />
+<input type="button" onclick="submitForm('opaembedd.php')" value="      OPA      " />
+<input type="button" onclick="submitForm('pvdembedd.php')" value="    PVD    " /></td></tr>
+<tr>
+<td>
+<h3>
+Extraction Algorithm
+</h3>
+</td>
+<td align="center">
+<input type="button" onclick="submitForm('lsbextract.php')" value="      LSB      " />
+<input type="button" onclick="submitForm('opaextract.php')" value="      OPA      " />
+<input type="button" onclick="submitForm('pvdextract.php')" value="    PVD    " /></td></tr>
+</tr>
+</table>
+</form>
+<br></i>
+<form name="fo" action="compare.php">
+<center><input type="submit" value="Compare PSNR values"></input></center>
+</form>
+</body>
+</html>
